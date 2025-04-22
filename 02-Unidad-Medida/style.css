@@ -1,0 +1,62 @@
+/* 
+
+  Unidad de medida fr
+  
+  Esta unidad permite fraccionar nuiestra grilla en fracciones.
+
+  Se utiliza en las propiedades Grid-tampple-colums o Grid-tampple-rows
+
+  La identiicamoscoin el valor de la fraccion y la cantidad de filas y columnasm separadas por un espacio.
+
+    Grid-tampple-colums: 1fr 1fr 1fr -> crea 3 columnas que mediran 1 fraccion del espacio disponible del contenedor
+    
+    Grid-tampple-rows:  -> crea 2 filasm la primera mide 1 fraccion de espacio disponible y la segunda el doble o 2 fracciones del espacio disponible  
+
+
+  Funcion Repeat
+
+  La funcion repeat nos permite repetir un numero determinado de filas y columnas en Css Grid.
+
+    Repeat
+  
+  Le indicamos el numero de repeticiones y el valor de medida, separado por una ","
+
+    Repeat ( repeticiones, medida );
+    Repeat (3, 1fr)
+
+  Esta funcion se pasa como valor de las propiedades grid-template-columns  y  grid-template-rows.
+  
+
+*/
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{font-family: sans-serif;
+}
+
+
+.container{
+  display: grid;
+  height: 100vh;
+ /*  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+ */
+ grid-template-columns: repeat(3, 1fr);
+
+ grid-template-rows: repeat(3, 1fr);
+
+
+  background-color: lightsalmon;
+
+}
+
+.item{
+  color: white;
+ background-color: darkslateblue;
+  
+}
