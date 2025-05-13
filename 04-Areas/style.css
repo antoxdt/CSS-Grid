@@ -1,0 +1,71 @@
+/* grid-template-areas
+
+    Nos permite definir areas a partir del nomnre de las areas y se utiliza la propiedad grid-template-area
+    
+    Para definir el nombre de las areas se escrinre las filas entre comillas y las cilumnas separadas por un esoacio.
+
+    grid-template-areas:
+      "header header header", fila 1
+      "mian main sidebar",    fila 2
+    
+    Con esto asignamos los nombres a cada area de la grilla
+
+  Para colocar los elementos en el area que le corresponde usamos el nombre de la prpiedad grid area y como cada valor el nombre del area asignadaa.
+
+  Para agrgar espacios entre columnas usamos la propuedad gap
+
+    gap: 24px
+
+  Si queremeos usar un espacio distinto para filas y columnas usamos : colum-gap: 16px y row-gap
+      
+*/
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: aquamarine;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas: 
+    "header header header"
+    "mian main sidebar"
+    "footer footer footer"
+  ;
+
+  gap: 24px;
+  column-gap: 12px;
+  row-gap: 12px;
+  padding: 12px;
+  height: 100vh;
+  background-color: lightskyblue;
+}
+
+.item{
+  color: dark;
+background-color: lightslategrey;
+}
+
+.header{
+  grid-area: header;
+  background-color: lightseagreen;
+}
+
+.main{
+  grid-area: main;
+  background-color: lightyellow;
+}
+.sidebar{
+  grid-area: sidebar;
+  background-color: lightcoral;
+}
+.footer{
+  grid-area: footer;
+  background-color: lightgreen;
+}
